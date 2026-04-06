@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="ExtendReportManager"></listener>
+    </listeners>
+    <test name="chromeTest"  thread-count="5" >
+        <parameter name="os" value="linux"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="MainClass">
+            </class>
+        </classes>
+    </test>
+
+    <test name="fireFoxTest"  thread-count="5" >
+        <parameter name="os" value="linux"></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="MainClass">
+            </class>
+        </classes>
+    </test>
+</suite>
